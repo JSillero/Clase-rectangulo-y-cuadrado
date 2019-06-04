@@ -1,26 +1,24 @@
 
 
-  package ExamenSegundoTrimestre;
+  
 
   public class Cuadrado extends Rectangulo {
     
-    public Cuadrado(int alto) {
-      super(alto,1);
+    public Cuadrado(int lado) {
+      super(lado,1);
       this.ancho=this.alto;
     }
     
-    @Override
-    public void setAlto(int alto2) {
-      super.setAlto(alto2);
-      this.ancho=this.alto;
+   
+    public void setLado(int lado) {
+      super.setAlto(lado);
+      super.setAncho(lado);
+
     }
     
-    @Override
-    public void setAncho(int ancho2) {
-      super.setAncho(ancho2);
-      this.alto=this.ancho;
+    
       
-    }
+    
     /**
      * Devuelve un boolean verdadero si los cuadrados son iguales y falso en caso contrario
      * @param cuad

@@ -21,14 +21,14 @@ equals y compareto
 from Rectangulo import Rectangulo
 from Cuadrado import Cuadrado
 
-cuad=Cuadrado(5)
+cuad=Cuadrado(15)
 cuad2=Cuadrado(4)
 cuad3=Cuadrado(3)
 cuad4=Cuadrado(4)
-rect=Rectangulo(4,5)
+rect=Rectangulo(3,11)
 print(cuad)
 print(rect)
-
+print(rect.ancho)
 if(cuad2==cuad4):
     print("Son iguales")
 else:

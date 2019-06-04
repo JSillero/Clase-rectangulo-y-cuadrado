@@ -1,4 +1,3 @@
-package ExamenSegundoTrimestre;
 
 public class testCuadrado_Rectangulo {
 

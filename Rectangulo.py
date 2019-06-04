@@ -8,36 +8,43 @@ Created on 5 abr. 2019
 
 
 
-class Rectangulo:
+class Rectangulo(Exception):
     '''
     Constructor de la clase rectangulo ,
     primer parametro, altura
     segundo parametro anchura
     '''
     def __init__(self,altura,anchura):
+        Exception.__init__(self)
         if (altura>10|altura<1|anchura>10|altura<1):
-            raise TypeError("Dato no valido")
-            
-            
-        self._alto=altura
-        self._ancho=anchura
+            print("Error")
+            raise ValueError("Dato no valido")
+            print("Error")
         
-    def getAlto(self):
+        self._alto=anchura
+        self._ancho=altura
+    
+    @property
+    def alto (self):
         return self._alto
     
-    def getAncho(self):
+    @alto.setter
+    def alto(self,alto):
+        if(alto>10|alto<1):
+            print("Error")
+            raise ValueError("Dato no valido")
+        self._alto=alto
+    
+    @property
+    def ancho(self):
         return self._ancho
     
-    def setAlto(self,altura):
-        if(altura>10|altura<1):
-            raise TypeError("Dato no valido")
-        self._alto=altura
-    
-    def setAncho(self,anchura):
-        if(anchura>10|anchura<1):
-            raise TypeError("Dato no valido")
+    @ancho.setter
+    def ancho(self,ancho):
+        if(ancho>10|ancho<1):
+            raise ValueError("Dato no valido")
         
-        self._ancho=anchura
+        self._ancho=ancho
     '''
     To string que muestra un dibujo de un rectangulo
     '''
@@ -69,5 +76,5 @@ class Rectangulo:
                 
     
         
-    
+Rectangulo    
         
